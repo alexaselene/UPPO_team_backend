@@ -1,0 +1,13 @@
+package org.uppo.maria_haro_1;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class MariaHaro1ApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
