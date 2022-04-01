@@ -1,6 +1,7 @@
 package org.uppo.maria_haro_1.usuarios;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -53,6 +54,7 @@ public class RegistroService {
 
 	public Usuarios inicioUsuario(Usuarios usuario) { 
 		Usuarios tempUsuario = null;
+		
 		for(Usuarios usuario_c : registrados) {
 			if(usuario.getNombre_usuario() == usuario_c.getNombre_usuario()) {
 				tempUsuario = usuario_c;
