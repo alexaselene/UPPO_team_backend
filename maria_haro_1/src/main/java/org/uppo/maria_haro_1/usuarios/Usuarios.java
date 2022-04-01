@@ -8,7 +8,6 @@ public class Usuarios {
 	private int id;
 	private static int total=0;
 	
-	
 	public Usuarios(String nombre_usuario, String contraseña, String nombre_apellidos, String telefono) {
 		super();
 		this.nombre_usuario = nombre_usuario;

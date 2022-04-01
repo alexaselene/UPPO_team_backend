@@ -62,8 +62,8 @@ public class ProductosController {
 			
 	@RequestParam(required=false)String nombre,
 	@RequestParam(required=false)String caracteristicas,
-	@RequestParam(required=false)double precio_producto,
-	@RequestParam(required=false)int stock,
+	@RequestParam(required=false)Double precio_producto,
+	@RequestParam(required=false)Integer stock,
 	@RequestParam(required=false)String imagen ){
 	return	productosService.updateProducto(prodId, nombre, caracteristicas, precio_producto, stock, imagen);
 		

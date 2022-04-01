@@ -61,8 +61,9 @@ public final ArrayList<Productos> lista= new ArrayList<Productos>();
 		return producto ;
 	}//addProducto
 
-	public Productos updateProducto(Long prodId, String nombre, String caracteristicas, double precio_producto,
-			int stock, String imagen) {
+	
+	public Productos updateProducto(Long prodId, String nombre, String caracteristicas, Double precio_producto,
+			Integer stock, String imagen) {
 		Productos tmpProd = null;
 		for (Productos producto : lista) {
 			if (producto.getId() == prodId) {
@@ -70,9 +71,9 @@ public final ArrayList<Productos> lista= new ArrayList<Productos>();
 					producto.setNombre(nombre);
 				if (caracteristicas != null)
 					producto.setCaracteristicas(caracteristicas);
-				if (precio_producto > 0)
+				if (precio_producto != null && precio_producto > 0)
 					producto.setPrecio_producto(precio_producto);
-				if (stock > 0)
+				if (stock != null && stock > 0)
 					producto.setStock(stock);
 				if (imagen != null)
 					producto.setImagen(imagen);
