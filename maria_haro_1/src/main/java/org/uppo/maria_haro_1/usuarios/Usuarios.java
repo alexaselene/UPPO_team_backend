@@ -15,6 +15,8 @@ public class Usuarios {
 		this.contraseña = contraseña;
 		this.nombre_apellidos = nombre_apellidos;
 		this.telefono = telefono;
+		total++;
+		this.id = total;
 	}//Usuarios
 	
 	
