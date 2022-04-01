@@ -54,10 +54,11 @@ public class RegistroService {
 
 	public Usuarios inicioUsuario(Usuarios usuario) { 
 		Usuarios tempUsuario = null;
-		
 		for(Usuarios usuario_c : registrados) {
-			if(usuario.getNombre_usuario() == usuario_c.getNombre_usuario()) {
+			if((usuario.getNombre_usuario().equals(usuario_c.getNombre_usuario())) 
+					&& (usuario.getContraseña().equals(usuario_c.getContraseña()))) {
 				tempUsuario = usuario_c;
+				break;
 			}
 		}
 		return tempUsuario;
