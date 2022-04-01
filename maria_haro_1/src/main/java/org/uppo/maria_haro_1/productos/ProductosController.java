@@ -15,12 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
-
 @RestController
 @RequestMapping (path="/api/productos/")
-@CrossOrigin(origins="*") //*
+@CrossOrigin(origins="*") 
 
 
 public class ProductosController {
@@ -44,10 +41,7 @@ public class ProductosController {
 	public Productos getProducto(@PathVariable("prodId") Long prodId) {
 		
 		return productosService.getProductos(prodId);
-		
-		
 	}//getPoducto	
-	
 	
 	
 	@DeleteMapping(path="{prodId}")
@@ -57,23 +51,21 @@ public class ProductosController {
 	}//deleteProducto
 	
 	
-	
-	
 	@PostMapping
 	public Productos addProducto(@RequestBody Productos productos) {
 		return productosService.addProducto(productos);
 	}//addProducto
 	
+	
 	@PutMapping(path="{prodId}")
-	//http://localhost:8080/api/productos/4?precio=68.74
+	//http://localhost:8080/api/precio_producto/4?precio=68.74
 	public Productos updateProducto(@PathVariable("prodId") Long prodId,
 			
 	@RequestParam(required=false)String nombre,
 	@RequestParam(required=false)String caracteristicas,
 	@RequestParam(required=false)double precio_producto,
 	@RequestParam(required=false)int stock,
-	
-	@RequestParam(required=false)String imagen )  {
+	@RequestParam(required=false)String imagen ){
 	return	productosService.updateProducto(prodId, nombre, caracteristicas, precio_producto, stock, imagen);
 		
 	}//updateProducto
