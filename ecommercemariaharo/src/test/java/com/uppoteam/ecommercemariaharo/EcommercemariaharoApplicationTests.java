@@ -1,10 +1,10 @@
-package com.uppoteam.ecomercemariaharo;
+package com.uppoteam.ecommercemariaharo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EcomercemariaharoApplicationTests {
+class EcommercemariaharoApplicationTests {
 
 	@Test
 	void contextLoads() {

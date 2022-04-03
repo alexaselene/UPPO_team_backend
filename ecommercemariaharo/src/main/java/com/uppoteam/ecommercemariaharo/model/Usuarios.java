@@ -1,8 +1,10 @@
-package com.uppoteam.ecomercemariaharo.model;
+package com.uppoteam.ecommercemariaharo.model;
 
 public class Usuarios {
 	
 	
+		
+		
 		private String nombre_usuario;
 		private String contraseña;
 		private String nombre_apellidos;
@@ -83,4 +85,7 @@ public class Usuarios {
 		
 		
 
-}///Usuarios
+	
+	
+
+} //class Usuarios 

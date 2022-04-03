@@ -1,13 +1,13 @@
-package com.uppoteam.ecomercemariaharo;
+package com.uppoteam.ecommercemariaharo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcomercemariaharoApplication {
+public class EcommercemariaharoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcomercemariaharoApplication.class, args);
+		SpringApplication.run(EcommercemariaharoApplication.class, args);
 	}
 
 }
