@@ -41,15 +41,30 @@ public class PedidosService {
 
 	//POST
 	public Pedidos addPedido(Pedidos pedido) {
-		Pedidos pedido_post= null;
-		Optional<Pedidos> prodById=pedidosRepository.findById(pedido.getId());
-		if(prodById.isPresent()) {
-			throw new IllegalStateException("El Producto con el nombre [" + pedido.getId() + 
-					"] YA existe."); 	
-		} else {
-			pedidosRepository.save(pedido);
-			pedido_post = pedido;
-		}//else 
-		return pedido_post;
-	}	
+		pedidosRepository.save(pedido);
+		return pedido;
+	}
+
+	
+
+	public Pedidos updatePedido(Long id, String fecha, String estado) {
+		Pedidos pedido_actual=null;
+		if (pedidosRepository.existsById(id)) {
+			pedido_actual = pedidosRepository.findById(id).get();
+			if (fecha!= null)pedido_actual.setFecha(fecha);
+		    if (estado!= null)pedido_actual.setEstado(estado);
+		    pedidosRepository.save(pedido_actual);
+		}else {
+			System.out.println("El pedido no existe con del id"+id);
+		}//else if
+		
+		return pedido_actual;
+	}
+	
+	//PUT
+	
+	
+	
+	
+	
 }
