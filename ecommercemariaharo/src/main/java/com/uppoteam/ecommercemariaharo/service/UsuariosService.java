@@ -35,7 +35,7 @@ public class UsuariosService {
 			}//if exist
 		}//deleteUsuario
 		public void addUsuario(Usuarios usuarios) {
-			Optional<Usuarios> userByName=usuariosRepository.findByUsername(usuarios.getNombre_usuario());
+			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(usuarios.getNombre_usuario());
 			if(userByName.isPresent()) {
 				throw new IllegalStateException("El usuario con el nombre [" + usuarios.getNombre_usuario() + "] YA existe.");
 			

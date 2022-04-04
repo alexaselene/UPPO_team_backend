@@ -9,6 +9,6 @@ import com.uppoteam.ecommercemariaharo.model.Usuarios;
 
 public interface UsuariosRepository 
 extends JpaRepository<Usuarios, Long> {
-	 @Query ("SELECT u FROM Usuario u WHERE u.username=?1")
-	Optional<Usuarios> findByUsername (String username);
+	 @Query ("SELECT u FROM Usuarios u WHERE u.nombre_usuario=?1")
+	Optional<Usuarios> findByNombre_usuario (String nombre_usuario);
 }//Interface UsuariosRepository

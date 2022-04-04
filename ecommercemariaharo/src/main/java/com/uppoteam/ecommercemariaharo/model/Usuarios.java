@@ -13,13 +13,12 @@ import javax.persistence.Table;
 public class Usuarios {
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column(name="id", unique=true, nullable=false)
-		
+	@Column(name="idusuario", unique=true, nullable=false)
+	    private int id;
 		private String nombre_usuario;
 		private String contraseña;
 		private String nombre_apellidos;
 		private String telefono;
-		private int id;
 		private static int total=0;
 		
 		public Usuarios(String nombre_usuario, String contraseña, String nombre_apellidos, String telefono) {
