@@ -1,9 +1,19 @@
 package com.uppoteam.ecommercemariaharo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="usuarios")
+
 public class Usuarios {
-	
-	
-		
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@Column(name="id", unique=true, nullable=false)
 		
 		private String nombre_usuario;
 		private String contraseña;
@@ -13,22 +23,17 @@ public class Usuarios {
 		private static int total=0;
 		
 		public Usuarios(String nombre_usuario, String contraseña, String nombre_apellidos, String telefono) {
-			super();
 			this.nombre_usuario = nombre_usuario;
 			this.contraseña = contraseña;
 			this.nombre_apellidos = nombre_apellidos;
 			this.telefono = telefono;
 			total++;
 			this.id = total;
-		}//Usuarios
+		}//Constructor Usuarios
 		
-		
-		public Usuarios() {
-			total++;
-			this.id = total;
-		}//Usuarios
+		public Usuarios() {}//Constructor vacío Usuarios
 
-
+// Abajo Get y Set
 		public String getNombre_usuario() {
 			return nombre_usuario;
 		}//getNombre_usuario
@@ -79,13 +84,8 @@ public class Usuarios {
 			return "Usuarios [nombre_usuario=" + nombre_usuario + ", contraseña=" + contraseña + ", nombre_apellidos="
 					+ nombre_apellidos + ", telefono=" + telefono + ", id=" + id + "]";
 		}//toString
-		
-		
-		
-		
-		
 
-	
+		
 	
 
 } //class Usuarios 
