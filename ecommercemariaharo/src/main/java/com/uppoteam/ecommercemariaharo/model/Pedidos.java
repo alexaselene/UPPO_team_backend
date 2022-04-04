@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Pedidos {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
+	@Column(name = "idpedido", unique = true, nullable = false)
 	private Long id;
 	private String fecha;
 	private String estado;
