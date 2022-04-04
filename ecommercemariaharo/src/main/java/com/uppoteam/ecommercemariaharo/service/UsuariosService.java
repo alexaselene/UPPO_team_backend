@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.uppoteam.ecommercemariaharo.model.ChangePassword;
 import com.uppoteam.ecommercemariaharo.model.Usuarios;
 
 @Service
@@ -43,5 +44,28 @@ public class UsuariosService {
 				usuariosRepository.save(usuarios);
 			}//else
 		}//addUsuario
+
+		public void uppdateUsuario(ChangePassword changePassword) {
+			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(changePassword.getNombre_usuario());
+			if(userByName.isPresent()) {
+				Usuarios u=userByName.get();
+				if(u.getContraseña().equals(changePassword.getContraseña())) {
+					u.setContraseña(changePassword.getNueva_contraseña());
+					usuariosRepository.save(u);
+				}//password
+			}//if is present			
+		}//uppdateUsuario
+		
+		public String validateUsuario(Usuarios usuarios) {
+			String res="Nombre de usuario o contraseña incorrectos";
+			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(usuarios.getNombre_usuario());
+			if(userByName.isPresent()) {
+				Usuarios u=userByName.get();
+				if(u.getContraseña().equals(usuarios.getContraseña())) {
+					res="Datos de usuario correctos";
+				}//if password
+			}//if is present
+			return res;
+		}//validateUsuario
 		
 }//class UsuariosService
