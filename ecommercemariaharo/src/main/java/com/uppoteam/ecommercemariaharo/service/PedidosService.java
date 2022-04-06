@@ -27,7 +27,7 @@ public class PedidosService {
 	//DELETE
 	public Pedidos getPedido(Long id) {
 		return pedidosRepository.findById(id).orElseThrow(
-				()-> new IllegalStateException("El producto con el id " + id + "no existe."));
+				()-> new IllegalStateException("El pedido con el id " + id + "no existe."));
 	}
 
 	public Pedidos deletePedido(Long id) {
