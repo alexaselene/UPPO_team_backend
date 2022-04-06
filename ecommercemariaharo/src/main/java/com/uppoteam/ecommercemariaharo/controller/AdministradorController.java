@@ -6,10 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.uppoteam.ecommercemariaharo.model.Administrador;
+import com.uppoteam.ecommercemariaharo.model.ChangePasswordAdmin;
 import com.uppoteam.ecommercemariaharo.service.AdministradorService;
 
 @RestController
@@ -35,6 +39,15 @@ public class AdministradorController {
 	public void deleteAdministrador(@PathVariable("prodId")Long id) {
 		administradorservice.deleteAdministrador(id);
 	}//delete administrador
+	@PostMapping
+	public void addAdministrador(@RequestBody Administrador administrador) {
+		administradorservice.addAdministrador(administrador);
+	}//addAdministrador
+	
+	@PutMapping
+	public void updateAdministrador(@RequestBody ChangePasswordAdmin changePasswordAdmin) {
+		administradorservice.updateAdministrador(changePasswordAdmin);
+	}//ChangePasswordAdmin
 	
 	
 		
