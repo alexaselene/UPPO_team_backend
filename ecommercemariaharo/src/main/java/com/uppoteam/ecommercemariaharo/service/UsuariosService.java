@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.uppoteam.ecommercemariaharo.model.ChangePassword;
 import com.uppoteam.ecommercemariaharo.model.Usuarios;
+import com.uppoteam.ecommercemariaharo.utils.SHAUtils;
 
 @Service
 public class UsuariosService {
@@ -41,6 +42,7 @@ public class UsuariosService {
 				throw new IllegalStateException("El usuario con el nombre [" + usuarios.getNombre_usuario() + "] YA existe.");
 			
 			}else {
+				usuarios.setContraseña( SHAUtils.createHash(usuarios.getContraseña()));
 				usuariosRepository.save(usuarios);
 			}//else
 		}//addUsuario
@@ -49,7 +51,7 @@ public class UsuariosService {
 			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(changePassword.getNombre_usuario());
 			if(userByName.isPresent()) {
 				Usuarios u=userByName.get();
-				if(u.getContraseña().equals(changePassword.getContraseña())) {
+				if(SHAUtils.verifyHash(changePassword.getContraseña(), u.getContraseña())) {
 					u.setContraseña(changePassword.getNueva_contraseña());
 					usuariosRepository.save(u);
 				}//password
@@ -61,7 +63,7 @@ public class UsuariosService {
 			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(usuarios.getNombre_usuario());
 			if(userByName.isPresent()) {
 				Usuarios u=userByName.get();
-				if(u.getContraseña().equals(usuarios.getContraseña())) {
+				if ( SHAUtils.verifyHash(usuarios.getContraseña(), u.getContraseña()) ) {
 					res="Datos de usuario correctos";
 				}//if password
 			}//if is present
