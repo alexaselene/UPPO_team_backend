@@ -17,15 +17,15 @@ public class Pedidos {
 	private String fecha;
 	private String estado;
 	private Double total;
+	private Long usuarios_idusuario;
 	
-	// Constructor
-	public Pedidos(Long id, String fecha, String estado, Double total) {
-		super();
+	public Pedidos(Long id, String fecha, String estado, Double total, Long usuarios_idusuario) {
 		this.id = id;
 		this.fecha = fecha;
 		this.estado = estado;
 		this.total = total;
-	} // Constructor
+		this.usuarios_idusuario = usuarios_idusuario;
+	}
 	
 	// Constructor vacío
 	public Pedidos() {
@@ -34,36 +34,40 @@ public class Pedidos {
 
 	public String getFecha() {
 		return fecha;
-	} //getFecha
+	}
 
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
-	} // setFecha
+	}
 
 	public String getEstado() {
 		return estado;
-	} //getEstado
+	}
 
 	public void setEstado(String estado) {
 		this.estado = estado;
-	} // setEstado
+	}
 
 	public Double getTotal() {
 		return total;
-	} //getTotal
+	}
 
 	public void setTotal(Double total) {
 		this.total = total;
-	} // setTotal
+	}
 
 	public Long getId() {
 		return id;
-	} // getId
+	}
 
-	// toString
+	public Long getUsuarios_idusuario() {
+		return usuarios_idusuario;
+	}
+
 	@Override
 	public String toString() {
-		return "Pedidos [id=" + id + ", fecha=" + fecha + ", estado=" + estado + ", total=" + total + "]";
-	} // toString
+		return "Pedidos [id=" + id + ", fecha=" + fecha + ", estado=" + estado + ", total=" + total
+				+ ", usuarios_idusuario=" + usuarios_idusuario + "]";
+	}
 	
 } //class Pedidos
