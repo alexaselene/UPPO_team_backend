@@ -9,7 +9,7 @@ import com.uppoteam.ecommercemariaharo.model.Administrador;
 
 public interface AdministradorRepository 
 	extends JpaRepository<Administrador,Long>{
-		@Query("SELECT u FROM Administrador u WHERE a.usuario=?1")
+		@Query("SELECT u FROM Administrador u WHERE u.usuario=?1")
 		Optional<Administrador> findByUsuario(String usuario);
 	}//AdministradorRepository
 

@@ -10,7 +10,7 @@ import com.uppoteam.ecommercemariaharo.model.Administrador;
 import com.uppoteam.ecommercemariaharo.service.AdministradorService;
 
 @RestController
-@RequestMapping(path="/api/login/")
+@RequestMapping(path="/api/login/admin/")
 
 public class LoginControllerAdmin {
 	private final AdministradorService administradorService;

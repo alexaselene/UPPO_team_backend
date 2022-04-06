@@ -8,6 +8,6 @@ public class EcommercemariaharoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EcommercemariaharoApplication.class, args);
-	}
+	}//main
 
-}
+}//class EcommercemariaharoApplication
