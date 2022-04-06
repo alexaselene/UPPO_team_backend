@@ -47,7 +47,7 @@ public void addUsuario(@RequestBody Usuarios usuarios) {
 
 @PutMapping
 public void updateUsuario(@RequestBody ChangePassword changePassword ) {
-	usuariosService.uppdateUsuario(changePassword);
+	usuariosService.updateUsuario(changePassword);
 }//ChangePassword 
 
 }//class UsuariosController

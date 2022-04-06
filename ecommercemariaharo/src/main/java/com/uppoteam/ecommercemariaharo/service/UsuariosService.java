@@ -45,7 +45,7 @@ public class UsuariosService {
 			}//else
 		}//addUsuario
 
-		public void uppdateUsuario(ChangePassword changePassword) {
+		public void updateUsuario(ChangePassword changePassword) {
 			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(changePassword.getNombre_usuario());
 			if(userByName.isPresent()) {
 				Usuarios u=userByName.get();
