@@ -20,80 +20,72 @@ public class Productos {
 		private double precio_producto;
 		private int stock;
 		private String imagen;
-		
-		
-		
-		
-		public Productos(long id, String nombre, String caracteristicas, double precio_producto, int stock, String imagen) {
+		private Long categoria_idcategoria;
+		public Productos(long id, String nombre, String caracteristicas, double precio_producto, int stock,
+				String imagen, Long categoria_idcategoria) {
 			super();
-			this.id=id;
+			this.id = id;
 			this.nombre = nombre;
 			this.caracteristicas = caracteristicas;
 			this.precio_producto = precio_producto;
 			this.stock = stock;
 			this.imagen = imagen;
-			
-		}///Productos
-
+			this.categoria_idcategoria = categoria_idcategoria;
+		}//constructor
 		public Productos() {
-			
 		}//constructor vacio
-
-		
-
 		public long getId() {
 			return id;
 		}
-
 		public void setId(long id) {
 			this.id = id;
 		}
-
 		public String getNombre() {
 			return nombre;
 		}
-
 		public void setNombre(String nombre) {
 			this.nombre = nombre;
 		}
-
 		public String getCaracteristicas() {
 			return caracteristicas;
 		}
-
 		public void setCaracteristicas(String caracteristicas) {
 			this.caracteristicas = caracteristicas;
 		}
-
 		public double getPrecio_producto() {
 			return precio_producto;
 		}
-
 		public void setPrecio_producto(double precio_producto) {
 			this.precio_producto = precio_producto;
 		}
-
 		public int getStock() {
 			return stock;
 		}
-
 		public void setStock(int stock) {
 			this.stock = stock;
 		}
-
 		public String getImagen() {
 			return imagen;
 		}
-
 		public void setImagen(String imagen) {
 			this.imagen = imagen;
 		}
-
+		public Long getCategoria_idcategoria() {
+			return categoria_idcategoria;
+		}
+		public void setCategoria_idcategoria(Long categoria_idcategoria) {
+			this.categoria_idcategoria = categoria_idcategoria;
+		}
 		@Override
 		public String toString() {
 			return "Productos [id=" + id + ", nombre=" + nombre + ", caracteristicas=" + caracteristicas
-					+ ", precio_producto=" + precio_producto + ", stock=" + stock + ", imagen=" + imagen + "]";
-		}
+					+ ", precio_producto=" + precio_producto + ", stock=" + stock + ", imagen=" + imagen
+					+ ", categoria_idcategoria=" + categoria_idcategoria + "]";
+		}//toString
+		
+		
+		
+		
 
 		
 		
