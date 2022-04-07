@@ -35,5 +35,26 @@ public class DetallePService {
 		}
 		return det_p_del;
 	}
+    
+	//POST
+	public DetallePedido addDetallePedido (DetallePedido detallep) {
+		// TODO Auto-generated method stub
+		detallePRepository.save(detallep);
+		return  detallep;
+	}
+
+	//PUT
+	public DetallePedido updateDetallePedido(Long id, Integer cantidad) {
+		   DetallePedido detalle_p= null;
+		   if (detallePRepository.existsById(id)) {
+			   detalle_p=detallePRepository.findById(id).get();
+			   if ( (cantidad!=null) && (cantidad>=0) ) detalle_p.setCantidad(cantidad);
+			   detallePRepository.save(detalle_p);
+		   }else {
+			   System.out.println("La orden de pedido no existe con el id"+id );
+		   }//else
+		
+		return detalle_p;
+	}
 
 }
