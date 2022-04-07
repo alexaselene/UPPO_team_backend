@@ -1,6 +1,7 @@
 package com.uppoteam.ecommercemariaharo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import com.uppoteam.ecommercemariaharo.model.Usuarios;
 import com.uppoteam.ecommercemariaharo.service.UsuariosService;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping(path="/api/login/")
 
 public class LoginController {
