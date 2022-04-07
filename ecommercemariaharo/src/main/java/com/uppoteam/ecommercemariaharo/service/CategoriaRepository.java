@@ -1,0 +1,11 @@
+package com.uppoteam.ecommercemariaharo.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.uppoteam.ecommercemariaharo.model.Categoria;
+
+
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
+	
+
+}//InterfaceRepository
