@@ -1,0 +1,140 @@
+/* Estilos generales */
+@import url("./../CSS/main.css");
+
+/* Formulario */
+
+/* Contenedores generales */
+.container{
+    padding-left: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.row{
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Inputs del formulario */
+.descripcion{
+    font-size: 22px;
+}
+
+/* Botón */
+.btn-block{
+    background-color: var(--rosa);
+    border-color: var(--rosa);
+    font-weight: bolder;
+}
+
+/* Imagen*/
+.imagen{
+    padding-bottom: 20px;
+}
+
+/* Contenedor de cada input */
+.container_1{
+    padding-bottom: 25px;
+   
+}
+
+.titulo_imagen{
+    color: var(--gris_obscuro)
+}
+
+/* Medias queery */
+
+/* Media queery de la tablet */ 
+@media screen and (max-width: 800px){
+    /* Organización del contenedor */
+    .container{
+        padding-left: 0px;
+    }
+
+    .navbar{
+        flex-wrap: nowrap;
+    }
+}
+
+/* Media queery de la phone */ 
+@media screen and (max-width: 600px){    
+
+    /* Organización del contenedor */
+    .container{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+     /* Tamaño del texto */
+    .text_1{
+        font-size: 50%;     
+    }
+
+    /* Texto en los input */
+    .descripcion{
+        font-size: 70%;
+    }
+
+    /*Separación entre inputs*/
+    .container_1{
+        padding-bottom: 10px;
+       
+    }
+
+     /*Tamaño de letra del botón */
+    .btn{
+        font-size: 50%;   
+    }
+    
+    /* Contenedor general */
+    .row{
+        align-items: center;
+    }
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+}
+
+/*Media screen de celular*/
+@media screen and (max-width:600px){
+    .pie_pagina .grupo_1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 0px 0px;
+    }
+
+    
+}
+
+/*Resposive de tablet*/
+@media screen and (max-width:800px){ 
+    .barra_busqueda{
+        display: none;
+   
+       }
+    #logo{
+        display:none;
+    }
+}
+
+/*Jumbotron*/
+.jumbotron{
+    background-image: url(./../img/1florero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   /* background-color: var(--beige)*/
+    text-align: center;
+    color: var(--azul_claro);
+  
+}
+.titulo_equipo{
+    font-weight: bolder;
+    letter-spacing: 30px;
+}
+.texto_equipo{
+    color:var(--azul_claro);
+    font-size: 30px;
+}

@@ -1,0 +1,291 @@
+/* Estilos generales */
+@import url("./../CSS/main.css");
+
+/*Jumbotron*/
+.jumbotron{
+    background-image: url(../img/manitas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   /* background-color: var(--beige)*/
+    text-align: center;
+    color: var(--azul_claro);
+}
+.titulo_equipo{
+    font-weight: bolder;
+    letter-spacing: 30px;
+}
+.texto_equipo{
+    color:var(--azul_claro);
+    font-size: 30px;
+}
+
+
+/* T A R J E T A S */
+/* Contenedor para cada tarjeta */ 
+.container{
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+/* Orientación y organización para la tarjeta y su espectiva imagen*/
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+/* Organización interna de cada tarjeta */
+.card{
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilo para las imágenes de cada integrante de equipo*/
+.equipo_img{
+    border-radius: 2%;
+}
+
+/* Organización interna y externa dentro de las cards */
+.col-md-8, .col-sm-8{
+    max-width: 95%;
+}
+
+.col-8{
+    max-width: 100%;
+}
+
+.col-4, .col-sm-4 .col-md-4{
+    padding: 0px;
+    padding-right: 10px;
+}
+
+/* Organización de los íconos y botones */
+.botones{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+/* Tamaño de los íconos */
+.boton_img{
+    width: 30px;
+    border-radius: 15%;
+
+}
+.boton_img:hover{
+    background-color: #B52D2D;
+
+}
+
+/* Media queery de la tablet */ 
+@media screen and (max-width: 800px){
+    /* Organización del contenedor */
+    .container{
+        padding-bottom: 30px;
+        padding-top: 15px;
+    }
+
+    /* Navbar */
+    .navbar{
+        flex-wrap: nowrap;
+    }
+    
+    /* Tamaño de los textos */
+    .texto, .texto_1{
+        font-size: 80%;
+    }
+    
+    /* Tamaño del nombre */
+    .card-title{
+        font-size: 150%; 
+        text-align: center; 
+    }
+
+    /* Organización del cuerpo de la tarjeta*/
+    .card-body{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* Tamaño y organización del botón */ 
+    .btn{
+        font-size: 80%;
+        padding: 5px;
+    }
+
+    /* Tamaño de los íconos */
+    .boton_img{
+        width: 15px;
+    }
+
+    /* Organización del ícono y botones*/
+    .botones{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /* Organización del container */
+    .container{
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+
+    /* Tamaño del texto */
+    .texto{
+        font-size: 60%;
+        margin: 0px;
+    }
+
+    /* Tamaño del nombre */
+    .card-title{
+        font-size: 75%; 
+        
+    }
+
+
+    /* Organización del cuerpo de la tarjeta */
+    .card-body{
+        padding: 10px 0px 0px 0px;
+    }
+
+    /* Tamaño de los botones e íconos */
+    .btn{
+        font-size: 50%;
+    }
+
+    /* Tamaño de los íconos */
+    .boton_img{
+        width: 10px;
+    }
+
+    /* Desaparecer información sobre gustos */
+    .texto_1{
+        display: none;
+    }
+    
+    /* Organización de los botones e íconos */
+    .botones{
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    /* Espacio entre botones e íconos */
+    .btn{
+        padding: 2px;
+    }
+}
+
+/*Cards*/
+.fondo_card{
+    background-color: var(--azul_claro);
+    color: var(--gris_obscuro);
+    border-radius: 30px;
+}
+
+/*Boton card*/
+.btn-block{
+    background-color: var(--rosa);
+    font-weight: bolder;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+/*Texto de la carrera*/
+.text-muted{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+/* media query para celular*/
+@media screen and (max-width: 600px){
+
+    .titulo_equipo{
+        
+        font-weight: normal;
+        font-size: 20px;
+    }
+    .texto_equipo{
+        font-size:15px;
+    }
+    #logo{
+        display:none;
+    /* width: 50px; height: 50px;
+     margin-left: 0px;*/
+    }
+    .barra_busqueda{
+     display: none;
+
+    }
+    .inicio_sesion{
+        width: 20px; height: 20px;
+        margin-right: 30px;
+        
+        display: flex;
+        align-items: flex-start;
+    }
+    .carrito_compra{
+        width: 20px; height: 20px;
+        margin-right: 30px;
+        
+        
+    }
+    .iconos{
+        display: flex;
+        flex-wrap: flex-start;
+        
+        
+    }
+    .text-muted{
+        font-weight: bold;
+        font-size: 10px;
+        
+    }
+    
+
+}
+
+/*Media screen de celular*/
+@media screen and (max-width:600px){
+    .pie_pagina .grupo_1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 0px 0px;
+    }
+
+    .acuarela{
+        display:none;
+    }
+
+    .container{
+        padding-right: 6%;
+        padding-left: 6%;
+
+    }
+}
+
+/*Resposive de tablet*/
+@media screen and (max-width:800px){ 
+    .barra_busqueda{
+        display: none;
+   
+       }
+    #logo{
+        display:none;
+    }
+}
+
+.btn-block{
+
+    background-color:#ED959C;
+    border-color: #ED959C;
+    color:white;
+}
