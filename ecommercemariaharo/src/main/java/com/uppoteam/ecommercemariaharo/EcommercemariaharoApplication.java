@@ -13,7 +13,7 @@ public class EcommercemariaharoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EcommercemariaharoApplication.class, args);
 	}//main
-
+/*
 	@Bean
 	public FilterRegistrationBean<JwtFilter> jwtFilter(){
 		FilterRegistrationBean<JwtFilter> registrationBean =
@@ -23,5 +23,5 @@ public class EcommercemariaharoApplication {
 		//registrationBean.addUrlPatterns("/api/administradores/*");)
 		return registrationBean;
 	}//jwFilter
-	
+	*/
 }//class EcommercemariaharoApplication
