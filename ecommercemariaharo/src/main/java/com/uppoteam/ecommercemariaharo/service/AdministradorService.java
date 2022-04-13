@@ -52,19 +52,19 @@ public class AdministradorService {
 		Optional<Administrador> userByName=administradorRepository.findByUsuario(changePasswordAdmin.getUsuario());
 		if(userByName.isPresent()) {
 			Administrador a=userByName.get();
-			if(a.getContraseña().equals(changePasswordAdmin.getContraseña())) {
-				a.setContraseña(changePasswordAdmin.getNueva_contraseña());
+			if(a.getContrasena().equals(changePasswordAdmin.getContrasena())) {
+				a.setContrasena(changePasswordAdmin.getNueva_contrasena());
 				administradorRepository.save(a);
 			}//password
 		}//if is present
 	}//updateAdmin
 
 	public String validateAdministrador(Administrador administrador) {
-		String res="Nombre de usuario o contraseña incorrectos";
+		String res="Nombre de usuario o contrasena incorrectos";
 		Optional<Administrador> userByName=administradorRepository.findByUsuario(administrador.getUsuario());
 		if(userByName.isPresent()) {
 			Administrador a=userByName.get();
-			if(a.getContraseña().equals(administrador.getContraseña())) {
+			if(a.getContrasena().equals(administrador.getContrasena())) {
 				res="Datos de usuario correctos";
 			}//if password
 		}//if is present

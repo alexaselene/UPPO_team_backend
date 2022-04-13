@@ -1,4 +1,4 @@
-const URL_MAIN ='http://localhost:8080/api/productos/';
+const URL_MAIN ='https://ecommercemariaharo.herokuapp.com/api/productos/';
 function addItems(plantilla) {
     fetch(URL_MAIN, {
         method: 'get'

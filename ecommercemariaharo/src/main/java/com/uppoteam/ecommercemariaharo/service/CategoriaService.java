@@ -26,7 +26,7 @@ public class CategoriaService {
 	
 	public Categoria getCategoria(Long id) {
 		return categoriaRepository.findById(id).orElseThrow(
-				()-> new IllegalStateException("La categoría con el id " + id + "no existe."));
+				()-> new IllegalStateException("La categoria con el id " + id + "no existe."));
 	}
 
 

@@ -42,7 +42,7 @@ public class UsuariosService {
 				throw new IllegalStateException("El usuario con el nombre [" + usuarios.getNombre_usuario() + "] YA existe.");
 			
 			}else {
-				usuarios.setContraseña( SHAUtils.createHash(usuarios.getContraseña()));
+				usuarios.setContrasena( SHAUtils.createHash(usuarios.getContrasena()));
 				usuariosRepository.save(usuarios);
 			}//else
 		}//addUsuario
@@ -51,8 +51,8 @@ public class UsuariosService {
 			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(changePassword.getNombre_usuario());
 			if(userByName.isPresent()) {
 				Usuarios u=userByName.get();
-				if(SHAUtils.verifyHash(changePassword.getContraseña(), u.getContraseña())) {
-					u.setContraseña(changePassword.getNueva_contraseña());
+				if(SHAUtils.verifyHash(changePassword.getContrasena(), u.getContrasena())) {
+					u.setContrasena(changePassword.getNueva_contrasena());
 					usuariosRepository.save(u);
 				}//password
 			}//if is present			
@@ -64,7 +64,7 @@ public class UsuariosService {
 			Optional<Usuarios> userByName=usuariosRepository.findByNombre_usuario(usuarios.getNombre_usuario());
 			if(userByName.isPresent()) {
 				Usuarios u=userByName.get();
-				if ( SHAUtils.verifyHash(usuarios.getContraseña(), u.getContraseña()) ) {
+				if ( SHAUtils.verifyHash(usuarios.getContrasena(), u.getContrasena()) ) {
 					res=true;
 				}//if password
 			}//if is present

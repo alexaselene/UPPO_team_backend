@@ -36,7 +36,7 @@ public class ProductosService {
 	public Productos getProducto(Long id) {
 		return	productosRepository.findById(id).orElseThrow(
 			() -> new IllegalStateException("El producto con el id" + id + "no existe")) ;
-		//esto es IllegalStateException una exception para si no existe el id señalado
+		
 		}// getProductos
 	
 	

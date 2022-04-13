@@ -3,19 +3,19 @@ package com.uppoteam.ecommercemariaharo.model;
 public class ChangePassword {
 	
 	private String Nombre_usuario;
-	private String contraseña;
-	private String nueva_contraseña;
+	private String contrasena;
+	private String nueva_contrasena;
 	
-	public ChangePassword(String nombre_usuario, String contraseña, String nueva_contraseña) {
+	public ChangePassword(String nombre_usuario, String contrasena, String nueva_contrasena) {
 	
 		Nombre_usuario = nombre_usuario;
-		this.contraseña = contraseña;
-		this.nueva_contraseña = nueva_contraseña;
+		this.contrasena = contrasena;
+		this.nueva_contrasena = nueva_contrasena;
 	}//constructor
 
 	public ChangePassword() {
 		
-	}//constructor vacio
+	}//constructor
 
 	public String getNombre_usuario() {
 		return Nombre_usuario;
@@ -25,28 +25,28 @@ public class ChangePassword {
 		Nombre_usuario = nombre_usuario;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 
-	public String getNueva_contraseña() {
-		return nueva_contraseña;
+	public String getNueva_contrasena() {
+		return nueva_contrasena;
 	}
 
-	public void setNueva_contraseña(String nueva_contraseña) {
-		this.nueva_contraseña = nueva_contraseña;
+	public void setNueva_contrasena(String nueva_contrasena) {
+		this.nueva_contrasena = nueva_contrasena;
 	}
 	
 	//Getters y Setters
 
 	@Override
 	public String toString() {
-		return "ChangePassword [Nombre_usuario=" + Nombre_usuario + ", contraseña=" + contraseña + ", nueva_contraseña="
-				+ nueva_contraseña + "]";
+		return "ChangePassword [Nombre_usuario=" + Nombre_usuario + ", contrasena=" + contrasena + ", nueva_contrasena="
+				+ nueva_contrasena + "]";
 	}//toString
 	
 	
