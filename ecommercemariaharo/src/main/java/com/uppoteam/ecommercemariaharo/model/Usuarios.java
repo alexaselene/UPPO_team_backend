@@ -16,21 +16,21 @@ public class Usuarios {
 	@Column(name="idusuario", unique=true, nullable=false)
 	    private int id;
 		private String nombre_usuario;
-		private String contraseña;
+		private String contrasena;
 		private String nombre_apellidos;
 		private String telefono;
 		private static int total=0;
 		
-		public Usuarios(String nombre_usuario, String contraseña, String nombre_apellidos, String telefono) {
+		public Usuarios(String nombre_usuario, String contrasena, String nombre_apellidos, String telefono) {
 			this.nombre_usuario = nombre_usuario;
-			this.contraseña = contraseña;
+			this.contrasena = contrasena;
 			this.nombre_apellidos = nombre_apellidos;
 			this.telefono = telefono;
 			total++;
 			this.id = total;
 		}//Constructor Usuarios
 		
-		public Usuarios() {}//Constructor vacío Usuarios
+		public Usuarios() {}//ConstructorUsuarios
 
 // Abajo Get y Set
 		public String getNombre_usuario() {
@@ -43,14 +43,14 @@ public class Usuarios {
 		}//setNombre_usuario
 
 
-		public String getContraseña() {
-			return contraseña;
-		}//getContraseña
+		public String getContrasena() {
+			return contrasena;
+		}//getContrasena
 
 
-		public void setContraseña(String contraseña) {
-			this.contraseña = contraseña;
-		}//setContraseña
+		public void setContrasena(String contrasena) {
+			this.contrasena = contrasena;
+		}//setContrasena
 
 
 		public String getNombre_apellidos() {
@@ -80,7 +80,7 @@ public class Usuarios {
 
 		@Override
 		public String toString() {
-			return "Usuarios [nombre_usuario=" + nombre_usuario + ", contraseña=" + contraseña + ", nombre_apellidos="
+			return "Usuarios [nombre_usuario=" + nombre_usuario + ", contrasena=" + contrasena + ", nombre_apellidos="
 					+ nombre_apellidos + ", telefono=" + telefono + ", id=" + id + "]";
 		}//toString
 

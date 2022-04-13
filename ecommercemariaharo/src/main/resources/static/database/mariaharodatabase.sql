@@ -20,7 +20,7 @@ USE `mariaharo_database` ;
 CREATE TABLE IF NOT EXISTS `mariaharo_database`.`usuarios` (
   `idusuario` INT NOT NULL AUTO_INCREMENT,
   `nombre_usuario` VARCHAR(45) NOT NULL,
-  `contraseña` VARCHAR(500) NOT NULL,
+  `contrasena` VARCHAR(500) CHARACTER SET 'armscii8' NOT NULL,
   `nombre_apellidos` VARCHAR(100) NOT NULL,
   `telefono` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idusuario`))
@@ -73,7 +73,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mariaharo_database`.`administradores` (
   `idadministradores` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(80) NOT NULL,
-  `contraseña` VARCHAR(500) NOT NULL,
+  `contrasena` VARCHAR(500) NOT NULL,
   PRIMARY KEY (`idadministradores`))
 ENGINE = InnoDB;
 

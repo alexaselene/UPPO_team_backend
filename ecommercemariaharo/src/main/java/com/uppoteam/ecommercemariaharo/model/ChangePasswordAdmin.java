@@ -2,15 +2,15 @@ package com.uppoteam.ecommercemariaharo.model;
 
 public class ChangePasswordAdmin {
 	private String usuario;
-	private String contraseña;
-	private String nueva_contraseña;
-	public ChangePasswordAdmin(String usuario, String contraseña, String nueva_contraseña) {
+	private String contrasena;
+	private String nueva_contrasena;
+	public ChangePasswordAdmin(String usuario, String contrasena, String nueva_contrasena) {
 		
 		this.usuario = usuario;
-		this.contraseña = contraseña;
-		this.nueva_contraseña = nueva_contraseña;
+		this.contrasena = contrasena;
+		this.nueva_contrasena = nueva_contrasena;
 	}//constructor
-	public ChangePasswordAdmin() {} //constructor vacío
+	public ChangePasswordAdmin() {} //constructor
 	
 	//Abajo get y set
 	
@@ -20,22 +20,22 @@ public class ChangePasswordAdmin {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}//setUsuario
-	public String getContraseña() {
-		return contraseña;
-	}//getContraseña
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
-	}//setContraseña
-	public String getNueva_contraseña() {
-		return nueva_contraseña;
-	}//getNueva_contraseña
-	public void setNueva_contraseña(String nueva_contraseña) {
-		this.nueva_contraseña = nueva_contraseña;
-	}//setNueva_contraseña
+	public String getContrasena() {
+		return contrasena;
+	}//getContrasena
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
+	}//setContrasena
+	public String getNueva_contrasena() {
+		return nueva_contrasena;
+	}//getNueva_contrasena
+	public void setNueva_contrasena(String nueva_contrasena) {
+		this.nueva_contrasena = nueva_contrasena;
+	}//setNueva_contrasena
 	@Override
 	public String toString() {
-		return "ChangePasswordAdmin [usuario=" + usuario + ", contraseña=" + contraseña + ", nueva_contraseña="
-				+ nueva_contraseña + "]";
+		return "ChangePasswordAdmin [usuario=" + usuario + ", contrasena=" + contrasena + ", nueva_contrasena="
+				+ nueva_contrasena + "]";
 	}//toString
 	
 }//class ChangePasswordAdmin

@@ -34,7 +34,7 @@ public class DetallePedido {
 
 	
 	
-	// Constructor vacío
+	// Constructor 
 	public DetallePedido() {
 		
 	}

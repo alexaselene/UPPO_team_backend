@@ -22,7 +22,7 @@ public class Categoria {
 		this.nombre_categoria = nombre_categoria;
 	}// Constructor
 
-	public Categoria() {} //constructor vacío
+	public Categoria() {} //constructor 
 
 	public String getNombre_categoria() {
 		return nombre_categoria;

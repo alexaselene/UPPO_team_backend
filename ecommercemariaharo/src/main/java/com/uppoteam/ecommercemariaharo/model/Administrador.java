@@ -15,14 +15,14 @@ public class Administrador {
 	@Column(name = "idadministradores", unique = true, nullable = false)
 	private int id;
 	private String usuario;
-	private String contraseña;
+	private String contrasena;
 	private static int total=0;
 	
 	
-	public Administrador(int id, String usuario, String contraseña) {
+	public Administrador(int id, String usuario, String contrasena) {
 		
 		this.usuario = usuario;
-		this.contraseña = contraseña;
+		this.contrasena = contrasena;
 		total ++;
 		this.id=total;
 	}//constructor
@@ -32,7 +32,7 @@ public class Administrador {
 
 	public Administrador() {
 		
-	}//constructor vacío
+	}//constructor 
 
 
 
@@ -53,13 +53,13 @@ public class Administrador {
 	}
 
 
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
 
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 
 	
@@ -67,7 +67,7 @@ public class Administrador {
 	
 	@Override
 	public String toString() {
-		return "Administrador [id=" + id + ", usuario=" + usuario + ", contraseña=" + contraseña + "]";
+		return "Administrador [id=" + id + ", usuario=" + usuario + ", contrasena=" + contrasena + "]";
 	}//toString
 	
 	

@@ -27,10 +27,10 @@ public class Pedidos {
 		this.usuarios_idusuario = usuarios_idusuario;
 	}
 	
-	// Constructor vacío
+	// Constructor
 	public Pedidos() {
 		
-	} // Constructor vacío
+	} // Constructor 
 
 	public String getFecha() {
 		return fecha;

@@ -36,7 +36,7 @@ public class LoginController {
 		if(usuariosService.validateUsuario(usuarios)) {
 			return new TokenUsuario(generateToken(usuarios.getNombre_usuario()));
 		}//if
-		throw new ServletException("Nombre de usuario o contraseña incorrectos");
+		throw new ServletException("Nombre de usuario o contrasena incorrectos");
 		
 	}//login
 	private String generateToken(String username) {
