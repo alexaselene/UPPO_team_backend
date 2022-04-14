@@ -125,7 +125,7 @@ function addItems(p_producto, pp_producto) {
                   <h3>${element.nombre}</h3>
                   
                   <h3 class = "precio_t">$${element.precio_producto} mxn</h3>
-                  <a href="./../pages/detalle_producto.html?id=${element.id}" type="button" class ="btn btn-danger" >Ver detalles</a>
+                  <a href="./../pages/detalle_producto.html?id=${element.id}" type="button" class ="btn btn-danger" target="_blank" >Ver detalles</a>
                   </div>
               </div>
               `
@@ -143,7 +143,7 @@ function addItems(p_producto, pp_producto) {
                   <h3>${element.nombre}</h3>
                   
                   <h3 class = "precio_t">$${element.precio_producto} mxn</h3>
-                  <a href="./../pages/detalle_producto.html?id=${element.id}" type="button" class ="btn btn-danger" >Ver detalles</a>
+                  <a href="./../pages/detalle_producto.html?id=${element.id}"   type="button" class ="btn btn-danger"  target="_blank" >Ver detalles</a>
                   </div>
               </div>
               `
