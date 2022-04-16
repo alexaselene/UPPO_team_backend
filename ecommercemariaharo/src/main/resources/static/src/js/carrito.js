@@ -15,6 +15,7 @@ tarjeta = document.getElementById("plantilla");
 // Recorrer el arreglo de los elementos del carrito
 productos.forEach(element => { // Recorrer el arreglo
 
+
     // Acumulación de options (select) según el stock del producto
     let acumulador = "";
     for(let cont = 1; cont <= element.stock; cont++){
@@ -34,6 +35,7 @@ productos.forEach(element => { // Recorrer el arreglo
     <img src=${element.imagen} alt="..." class = "img-fluid">
   </div>
   <div class="col-md-8 col-12">
+
   <button type = "button" class = "btn boton_eliminar" id = "eliminar_${element.id}"></button>
     <div class="card-body">
         <h5 class="card-title">${element.nombre}</h5>
@@ -47,6 +49,7 @@ productos.forEach(element => { // Recorrer el arreglo
               </select>
           </div>
       </form>
+
 
       <p class="precio" id = "precio_${element.id}">Total: $ ${subtotal} MXN</p>
           
@@ -64,6 +67,7 @@ productos.forEach(element => { // Recorrer el arreglo
   // Imprimir los cálculos 
   sin_envio.textContent = `$ ${total} MXN`;
   costo_total.textContent = `$ ${total + 50} MXN`;
+
 
   // Cambios en la cantidad de elementos
   const op = document.querySelectorAll(`.opcion`);
@@ -121,12 +125,15 @@ productos.forEach(element => { // Recorrer el arreglo
     });
   });
 
+
   //Evento de compra
   compra = document.getElementById("compra");
   compra.addEventListener("click", (e_compra)=>{
     e_compra.preventDefault();
 
+
     Swal.fire({                                         
+
       title: '¡Gracias por tu compra!',
       text: "Pedido realizado",
       icon: 'success',
